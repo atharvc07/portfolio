@@ -1,0 +1,69 @@
+<!doctype html>
+<!-- Blog post template. Copy this file to blog/<slug>.html, replace the title, date, description and body,
+     then add a row for it in the BLOG section of ../index.html (instructions are in a comment there).
+     Write the body with plain tags: <p>, <h2>, <ul>/<li>, <blockquote>, <pre><code>, <img src="" alt="">. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Post title · Atharv Chopade</title>
+<meta name="description" content="One sentence on what this post is about.">
+<meta name="theme-color" content="#f5f2ea">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Space+Mono:wght@400;700&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&display=swap" rel="stylesheet">
+<style>
+  :root { --bg: #f5f2ea; --ink: #111111; --muted: #686868; --line: rgba(17,17,17,.12); --blue: #2457ff;
+    --sans: "Space Grotesk", system-ui, sans-serif; --mono: "Space Mono", ui-monospace, monospace; --serif: "Newsreader", Georgia, serif; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 400 19px/1.75 var(--sans);
+    background-image: radial-gradient(rgba(17,17,17,.06) 1px, transparent 1px); background-size: 22px 22px; -webkit-font-smoothing: antialiased; }
+  a { color: var(--blue); }
+  ::selection { background: var(--blue); color: #fff; }
+  :focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; }
+  header { position: sticky; top: 0; background: rgba(245,242,234,.86); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-bottom: 1px solid rgba(17,17,17,.08); }
+  .nav { display: flex; align-items: center; justify-content: space-between; height: 60px; width: min(100% - 48px, 1360px); margin: 0 auto; }
+  .nav a { color: var(--muted); text-decoration: none; font: 500 12px/1 var(--sans); letter-spacing: .14em; }
+  .nav a:hover { color: var(--ink); }
+  .dot { width: 10px; height: 10px; border-radius: 50%; background: var(--ink); display: block; }
+  article { width: min(100% - 48px, 680px); margin: 0 auto; padding: 96px 0 120px; }
+  .label { font: 400 12px/1 var(--mono); letter-spacing: .2em; color: var(--muted); margin: 0; }
+  h1 { font: 700 clamp(38px, 6vw, 58px)/1.05 var(--sans); letter-spacing: -0.025em; margin: 20px 0 16px; }
+  .lede { font: italic 400 22px/1.5 var(--serif); color: var(--muted); margin: 0 0 48px; padding-bottom: 32px; border-bottom: 1px solid var(--line); }
+  article h2 { font: 700 28px/1.25 var(--sans); letter-spacing: -0.015em; margin: 56px 0 12px; }
+  article p, article ul, article ol { margin: 0 0 22px; }
+  article li { margin-bottom: 8px; }
+  blockquote { margin: 32px 0; padding-left: 20px; border-left: 2px solid var(--blue); font: italic 400 22px/1.5 var(--serif); }
+  pre { margin: 28px 0; padding: 20px; overflow-x: auto; background: rgba(17,17,17,.05); border-radius: 8px; font: 400 14px/1.6 var(--mono); }
+  code { font-family: var(--mono); font-size: .85em; }
+  img { max-width: 100%; height: auto; border-radius: 6px; }
+  .end { margin-top: 72px; padding-top: 24px; border-top: 1px solid var(--line); display: flex; justify-content: space-between; gap: 16px; font: 400 12px/1.4 var(--mono); letter-spacing: .1em; }
+  .end a { text-decoration: none; }
+  @media (max-width: 640px) { body { font-size: 17px; } article { padding: 64px 0 88px; } .lede, blockquote { font-size: 19px; } }
+</style>
+</head>
+<body>
+<header>
+  <nav class="nav" aria-label="Main">
+    <a href="../index.html#top" aria-label="Home"><span class="dot"></span></a>
+    <a href="../index.html#blog">← ALL POSTS</a>
+  </nav>
+</header>
+<article>
+  <p class="label">NOV 2026 · 5 MIN READ</p>
+  <h1>Post title</h1>
+  <p class="lede">One or two lines on what this post is about.</p>
+
+  <p>Start writing here.</p>
+
+  <h2>A section heading</h2>
+  <p>More writing.</p>
+
+  <div class="end">
+    <a href="../index.html#blog">← ALL POSTS</a>
+    <a href="mailto:atharv9jan2004@gmail.com">SAY HELLO →</a>
+  </div>
+</article>
+</body>
+</html>

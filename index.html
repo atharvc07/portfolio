@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Atharv Chopade</title>
+<meta name="description" content="Atharv Chopade, full-stack AI engineer in Pune. React, Node.js, Python and LLM-powered web apps.">
+<meta property="og:title" content="Atharv Chopade">
+<meta property="og:description" content="Full-stack AI engineer in Pune. React, Node.js, Python and LLM-powered web apps.">
+<meta name="theme-color" content="#f5f2ea">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Space+Mono:wght@400;700&family=Newsreader:ital,opsz,wght@1,6..72,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f5f2ea; --ink: #111111; --muted: #686868; --line: rgba(17,17,17,.12); --blue: #2457ff;
+    --sans: "Space Grotesk", system-ui, sans-serif;
+    --mono: "Space Mono", ui-monospace, monospace;
+    --serif: "Newsreader", Georgia, serif;
+    --w: 1040px;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink); font: 400 17px/1.6 var(--sans);
+    background-image: radial-gradient(rgba(17,17,17,.06) 1px, transparent 1px); background-size: 22px 22px;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; text-decoration: none; }
+  ::selection { background: var(--blue); color: #fff; }
+  :focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; border-radius: 2px; }
+  .wrap { width: min(100% - 48px, var(--w)); margin: 0 auto; }
+  .label { font: 400 12px/1 var(--mono); letter-spacing: .2em; color: var(--muted); margin: 0; }
+  .meta { font: 400 11px/1.4 var(--mono); letter-spacing: .1em; color: var(--muted); white-space: nowrap; }
+  .rule { border: 0; border-top: 1px solid var(--line); margin: 0; }
+
+  /* nav */
+  header { position: sticky; top: 0; z-index: 10; background: rgba(245,242,234,.86); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-bottom: 1px solid rgba(17,17,17,.08); }
+  .nav { display: flex; align-items: center; justify-content: space-between; height: 60px; width: min(100% - 48px, 1360px); margin: 0 auto; }
+  .dot { width: 10px; height: 10px; border-radius: 50%; background: var(--ink); display: block; }
+  .nav ul { display: flex; gap: 28px; list-style: none; margin: 0; padding: 0; }
+  .nav ul a { font: 500 12px/1 var(--sans); letter-spacing: .14em; color: var(--muted); transition: color .2s; }
+  .nav ul a:hover { color: var(--ink); }
+  .status { display: inline-flex; align-items: center; gap: 8px; height: 30px; padding: 0 12px; border: 1px solid rgba(17,17,17,.14); border-radius: 999px; font: 700 11px/1 var(--mono); letter-spacing: .1em; }
+  .status i { width: 7px; height: 7px; border-radius: 50%; background: #1fa45a; box-shadow: 0 0 0 3px rgba(31,164,90,.15); }
+
+  /* hero */
+  .hero { padding: 120px 0 72px; }
+  .hero h1 { font: 700 clamp(72px, 13vw, 133px)/.9 var(--sans); letter-spacing: -0.03em; margin: 28px 0 32px; }
+  .intro { font-size: 22px; line-height: 1.6; max-width: 620px; margin: 0; }
+  .intro em { font: italic 400 22px/1.6 var(--serif); }
+  .tagline { margin: 40px 0 0; padding-top: 18px; border-top: 1px solid var(--line); max-width: 420px; font: 400 12px/1.5 var(--mono); color: var(--muted); }
+  .tagline b { color: var(--blue); font-weight: 400; }
+
+  /* now */
+  .now { display: grid; grid-template-columns: 240px 1fr; align-items: baseline; padding: 56px 0; }
+  .now a { font: 700 clamp(26px, 3.4vw, 38px)/1.3 var(--sans); letter-spacing: -0.02em; color: var(--blue); }
+  .now a:hover { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 6px; }
+
+  section.block { padding: 72px 0; }
+  .head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 28px; }
+  .head .note { font: italic 400 19px/1 var(--serif); color: var(--muted); }
+
+  /* things I've built */
+  .builds { list-style: none; margin: 0; padding: 0; }
+  .build { display: grid; grid-template-columns: 1fr auto; gap: 8px 32px; padding: 28px 0 32px; border-top: 1px solid var(--line); }
+  .build:last-child { border-bottom: 1px solid var(--line); }
+  .build h3 { font: 700 clamp(38px, 5vw, 58px)/1 var(--sans); letter-spacing: -0.02em; margin: 0; transition: transform .25s ease; }
+  .build:hover h3 { transform: translateX(6px); }
+  .build p { grid-column: 1; margin: 6px 0 0; max-width: 52ch; color: #2a2a2a; }
+  .build .meta { grid-column: 2; grid-row: 1; align-self: center; text-align: right; }
+  .build .stack { grid-column: 1; margin-top: 4px; font: 400 12px/1.6 var(--mono); color: var(--muted); }
+
+  /* numbered rows (work, stack) */
+  .rows { list-style: none; margin: 0; padding: 0; }
+  .rows li { display: grid; grid-template-columns: 38px 1fr auto; align-items: baseline; gap: 16px; padding: 18px 0; border-top: 1px solid var(--line); }
+  .rows li:last-child { border-bottom: 1px solid var(--line); }
+  .rows .n { font: 400 13px/1 var(--mono); color: var(--muted); }
+  .rows .t { font: 500 25px/1.3 var(--sans); letter-spacing: -0.01em; transition: color .2s; }
+  .rows .t small { display: block; margin-top: 4px; font: 400 16px/1.55 var(--sans); letter-spacing: 0; color: #444; }
+  .rows .meta { text-align: right; }
+  .rows li:hover .t { color: var(--blue); }
+  .posts li > a { display: contents; }
+  .posts li.empty:hover .t { color: var(--ink); }
+  .posts li.empty .t { color: var(--muted); }
+  .build .links { grid-column: 1; display: flex; gap: 20px; margin-top: 6px; font: 700 12px/1 var(--mono); letter-spacing: .1em; }
+  .build .links a { color: var(--blue); border-bottom: 1px solid currentColor; padding-bottom: 3px; }
+  .build .links a:hover { color: var(--ink); }
+
+  /* about */
+  .about h2 { font: 700 clamp(40px, 6vw, 66px)/1.05 var(--sans); letter-spacing: -0.03em; margin: 0 0 56px; max-width: 14ch; }
+  .about-grid { display: grid; grid-template-columns: 1fr 1.25fr; gap: 56px; }
+  .facts { list-style: none; margin: 0; padding: 0; align-content: start; }
+  .facts li { display: flex; justify-content: space-between; gap: 16px; padding: 14px 0; border-top: 1px solid var(--line); }
+  .facts li:last-child { border-bottom: 1px solid var(--line); }
+  .facts span:last-child { color: var(--ink); text-align: right; }
+  .about-text p { margin: 0 0 18px; }
+  .about-text p.dim { color: var(--muted); }
+  .about-text a.more { display: inline-block; margin-top: 8px; font: 400 12px/1.4 var(--mono); color: var(--blue); border-bottom: 1px solid currentColor; padding-bottom: 2px; }
+
+  /* contact */
+  .contact { display: grid; grid-template-columns: 1fr auto; align-items: end; gap: 32px; padding: 88px 0 96px; }
+  .contact h2 { font: 700 34px/1.2 var(--sans); letter-spacing: -0.02em; margin: 0 0 6px; }
+  .contact .mail { font: 700 clamp(24px, 4.6vw, 50px)/1.15 var(--sans); letter-spacing: -0.02em; color: var(--blue); overflow-wrap: anywhere; }
+  .contact .mail:hover { text-decoration: underline; text-decoration-thickness: 3px; text-underline-offset: 8px; }
+  .socials { list-style: none; margin: 0; padding: 0; text-align: right; font: 400 12px/1.9 var(--mono); letter-spacing: .08em; color: var(--muted); }
+  .socials a:hover { color: var(--ink); }
+  footer { padding: 0 0 40px; }
+  footer .wrap { display: flex; justify-content: space-between; font: 400 11px/1 var(--mono); letter-spacing: .1em; color: var(--muted); }
+
+  @media (max-width: 760px) {
+    .nav ul { display: none; }
+    .hero { padding: 72px 0 48px; }
+    .intro, .intro em { font-size: 19px; }
+    .now { grid-template-columns: 1fr; gap: 14px; padding: 40px 0; }
+    section.block { padding: 48px 0; }
+    .build { grid-template-columns: 1fr; }
+    .build .meta { grid-column: 1; grid-row: auto; text-align: left; }
+    .rows li { grid-template-columns: 30px 1fr; }
+    .rows .meta { grid-column: 2; text-align: left; }
+    .rows .t { font-size: 21px; }
+    .about-grid { grid-template-columns: 1fr; gap: 32px; }
+    .contact { grid-template-columns: 1fr; padding: 64px 0 72px; }
+    .socials { text-align: left; }
+    .head .note { display: none; }
+  }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
+</style>
+</head>
+<body>
+<header>
+  <nav class="nav" aria-label="Main">
+    <a href="#top" aria-label="Back to top"><span class="dot"></span></a>
+    <ul>
+      <li><a href="#built">BUILDING</a></li>
+      <li><a href="#work">WORK</a></li>
+      <li><a href="#blog">BLOG</a></li>
+      <li><a href="#stack">STACK</a></li>
+      <li><a href="#about">ABOUT</a></li>
+    </ul>
+    <span class="status"><i aria-hidden="true"></i>OPEN TO WORK</span>
+  </nav>
+</header>
+
+<main id="top">
+  <section class="hero wrap">
+    <p class="label">HI, I'M</p>
+    <h1>Atharv</h1>
+    <p class="intro">I build web apps, and lately I keep finding reasons to put a language model inside them. My favourite part is the stretch between a rough idea and something a real person logs into. <em>What does this look like once it has to work on a Monday morning?</em> That's usually the question I'm chasing.</p>
+    <p class="tagline">full-stack, <b>python</b>, <b>typescript</b>, a little too much <b>postgres</b></p>
+  </section>
+
+  <div class="wrap"><hr class="rule"></div>
+
+  <div class="wrap now">
+    <p class="label">NOW</p>
+    <a href="#built">building a voice-driven CRM agent →</a>
+  </div>
+
+  <div class="wrap"><hr class="rule"></div>
+
+  <section class="block wrap" id="built" aria-labelledby="built-h">
+    <div class="head"><p class="label" id="built-h">THINGS I'VE BUILT</p><span class="note">start to finish, every layer.</span></div>
+    <ul class="builds">
+      <!-- Project links: when a project has a live site or repo, add inside its <li>, after .stack:
+           <span class="links"><a href="https://..." target="_blank" rel="noopener">LIVE ↗</a><a href="https://github.com/..." target="_blank" rel="noopener">CODE ↗</a></span> -->
+      <li class="build">
+        <h3>Voice CRM Agent</h3>
+        <span class="meta">IN PROGRESS · AGENTS</span>
+        <p>An agent that listens to live customer calls, transcribes them as they happen and pulls out the lead: name, contact details, what they want. The hard part is judgement, so it spots duplicates and unclear calls and decides when to file a lead itself and when to hand it to a person.</p>
+        <span class="stack">python · node · openai / claude · speech-to-text · postgres</span>
+      </li>
+      <li class="build">
+        <h3>AccidentAI</h3>
+        <span class="meta">PROJECT · DEEP LEARNING</span>
+        <p>Pick any route and see where accidents are likely, drawn as a heatmap. A hybrid CNN, BiLSTM and GRU model trained on the US Accidents dataset, with SMOTE rebalancing and per-class thresholds so the rare, severe crashes don't get lost. Live weather from Open-Meteo, routes from OSRM.</p>
+        <span class="stack">python · tensorflow / keras · flask · leaflet.js · osrm · openstreetmap</span>
+      </li>
+      <li class="build">
+        <h3>AI Helpdesk</h3>
+        <span class="meta">PROJECT · FULL STACK</span>
+        <p>A ticketing platform where an LLM classifies every new ticket, works out the intent and suggests a first reply, so agents skip most of the triage. Admin, agent and customer roles, SLA tracking, audit logs and real-time dashboards, shipped through CI/CD.</p>
+        <span class="stack">react · typescript · node · postgres · rest apis · llms</span>
+      </li>
+    </ul>
+  </section>
+
+  <div class="wrap"><hr class="rule"></div>
+
+  <section class="block wrap" id="work" aria-labelledby="work-h">
+    <div class="head"><p class="label" id="work-h">WORK &amp; SCHOOL</p><span class="note">where I've been.</span></div>
+    <ol class="rows">
+      <li><span class="n">01</span><span class="t">Software Engineer, Full-Stack, Turingly<small>Remote, for a team in Oakland. Shipped features for a pre-PMF product in React, Flask and Node.js, wired OpenAI and Claude into core workflows, and worked on architecture and schema while requirements moved week to week.</small></span><span class="meta">JAN – APR 2026</span></li>
+      <li><span class="n">02</span><span class="t">B.Tech, Computer Science and Engineering<small>DY Patil International University, Pune.</small></span><span class="meta">2022 – 2026</span></li>
+      <li><span class="n">03</span><span class="t">Higher Secondary<small>MIT College, Pune.</small></span><span class="meta">2020 – 2022</span></li>
+    </ol>
+  </section>
+
+  <div class="wrap"><hr class="rule"></div>
+
+  <section class="block wrap" id="blog" aria-labelledby="blog-h">
+    <div class="head"><p class="label" id="blog-h">BLOG / LONGER FORM</p><span class="note">thinking out loud.</span></div>
+    <!-- To publish a post: copy blog/post-template.html to blog/<slug>.html, write it, then add a row here (newest first):
+         <li><a href="blog/<slug>.html"><span class="n">01</span><span class="t">Post title</span><span class="meta">NOV 2026 →</span></a></li>
+         and delete the empty-state row below. -->
+    <ol class="rows posts">
+      <li class="empty"><span class="n">—</span><span class="t">First post is on its way.<small>Notes on building agents, the projects above, and what broke along the way.</small></span><span class="meta">SOON</span></li>
+    </ol>
+  </section>
+
+  <div class="wrap"><hr class="rule"></div>
+
+  <section class="block wrap" id="stack" aria-labelledby="stack-h">
+    <div class="head"><p class="label" id="stack-h">WHAT I REACH FOR</p><span class="note">tools, not trophies.</span></div>
+    <ol class="rows">
+      <li><span class="n">01</span><span class="t">Python, TypeScript, JavaScript, SQL</span><span class="meta">LANGUAGES</span></li>
+      <li><span class="n">02</span><span class="t">React, Node.js, Flask, REST APIs</span><span class="meta">WEB</span></li>
+      <li><span class="n">03</span><span class="t">PostgreSQL, SQLite, AWS, CI/CD, Git</span><span class="meta">DATA &amp; CLOUD</span></li>
+      <li><span class="n">04</span><span class="t">OpenAI and Claude APIs, prompt engineering, LLM data extraction, agentic decision logic</span><span class="meta">AI</span></li>
+    </ol>
+  </section>
+
+  <div class="wrap"><hr class="rule"></div>
+
+  <section class="block wrap about" id="about" aria-labelledby="about-h">
+    <h2 id="about-h">I like owning things end to end.</h2>
+    <div class="about-grid">
+      <ul class="facts meta">
+        <li><span>BASED IN</span><span>PUNE, INDIA</span></li>
+        <li><span>LAST AT</span><span>TURINGLY</span></li>
+        <li><span>STUDIED</span><span>B.TECH CSE, 2026</span></li>
+        <li><span>LOOKING FOR</span><span>FULL-TIME ROLES</span></li>
+      </ul>
+      <div class="about-text">
+        <p>Give me a feature and I'm happiest taking it all the way: the requirement, the schema, the API, the screen, the deploy.</p>
+        <p>Most of what I know came from shipping something, watching where it broke and fixing that first. Lately that means agents: pulling structured data out of messy input, then deciding what to do with it and when to ask a person instead.</p>
+        <p>I care about the parts nobody sees. Access rules, audit logs, a schema that won't hurt in six months.</p>
+        <p class="dim">This page is a running list of what I'm building and where I'm headed next.</p>
+        <a class="more" href="mailto:atharv9jan2004@gmail.com">→ Hiring? Let's talk</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap"><hr class="rule"></div>
+
+  <section class="wrap contact" aria-labelledby="contact-h">
+    <div>
+      <h2 id="contact-h">Say hello →</h2>
+      <a class="mail" href="mailto:atharv9jan2004@gmail.com">atharv9jan2004@gmail.com</a>
+    </div>
+    <ul class="socials">
+      <li><a href="https://github.com/atharvc07" rel="me">GITHUB</a></li>
+      <li><a href="https://www.linkedin.com/in/atharv-chopade-112a7b24b/" rel="me">LINKEDIN</a></li>
+      <li><a href="https://x.com/ChopadeAtharv" rel="me">TWITTER / X</a></li>
+    </ul>
+  </section>
+</main>
+
+<footer><div class="wrap"><span>© 2026 ATHARV CHOPADE</span><span>PUNE</span></div></footer>
+</body>
+</html>
